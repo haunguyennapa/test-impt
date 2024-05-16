@@ -1,5 +1,5 @@
 import { TAdvertiser } from "@/services/type";
-import { Card } from "antd";
+import { Card, Typography } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -11,13 +11,13 @@ type Props = {
 const Advertiser: FC<Props> = ({ advertiser }) => {
   return (
     <Link
-      href={advertiser.deeplinkURL}
+      className={!advertiser.deeplinkURL ? "pointer-events-none" : ""}
+      href={advertiser.deeplinkURL ?? ""}
       rel="noopener noreferrer"
       target="_blank"
     >
       <Card
         hoverable
-        style={{ width: 240 }}
         cover={
           <Image
             alt={advertiser.name}
@@ -29,7 +29,7 @@ const Advertiser: FC<Props> = ({ advertiser }) => {
       >
         <Card.Meta
           title={advertiser.name}
-          description={advertiser.description}
+          description={<Typography.Paragraph ellipsis={{ rows: 6 }}>{advertiser.description}</Typography.Paragraph>}
         />
       </Card>
     </Link>

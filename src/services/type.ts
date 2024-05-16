@@ -42,7 +42,7 @@ export enum EProgramStatus {
 }
 
 export enum EApplicationStatus {
-  ALLl = "All",
+  ALL = "All",
   APPROVED = "Approved",
   DEACTIVATED = "Deactivated",
   DECLINED = "Declined",

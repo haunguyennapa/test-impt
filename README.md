@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project's techstack is [next:13.4.12](https://nextjs.org/), [eact:18.2.0](https://react.dev) with [typescript:4.9.5](https://www.typescriptlang.org/).
+
+- API Service: [axios:1.2.0](https://axios-http.com/) and [@tanstack/react-query:5.36.0](https://tanstack.com/query/v5/docs/framework/react/overview)
+- UI Library: [antd:5.17.2](https://ant.design/), [tailwindcss:3.4.3](https://tailwindcss.com/)
 
 ## Getting Started
 
-First, run the development server:
+Firstly, rename `.env.example` into `.env` then update enviroment variables file: `.env`
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+NEXT_PUBLIC_API_URL=
+NEXT_PUBLIC_API_KEY=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Secondly, open your terminal and run 
+```bash
+npm i -g yarn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+yarn dev
+```
 
-## Learn More
+Thirdly, open your browser at `http://localhost:3000` to test the response of the api.
 
-To learn more about Next.js, take a look at the following resources:
+## Feature
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Main screen: using api `{API_URL}/advertisers` to get all advertisers with request params
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+{
+    page?: number,
+    pageSize?: number,
+    ProgramStatus: "Approved" | "Deactivated",
+    name: string \* advertiser name *\
+}
+```
 
-## Deploy on Vercel
+## Example screenshot
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![alt screenshot](./screenshot.png)

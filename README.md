@@ -1,4 +1,4 @@
-This project's techstack is [next:13.4.12](https://nextjs.org/), [eact:18.2.0](https://react.dev) with [typescript:4.9.5](https://www.typescriptlang.org/).
+This project's techstack is [next:13.4.12](https://nextjs.org/), [react:18.2.0](https://react.dev) with [typescript:4.9.5](https://www.typescriptlang.org/).
 
 - API Service: [axios:1.2.0](https://axios-http.com/) and [@tanstack/react-query:5.36.0](https://tanstack.com/query/v5/docs/framework/react/overview)
 - UI Library: [antd:5.17.2](https://ant.design/), [tailwindcss:3.4.3](https://tailwindcss.com/)
@@ -34,6 +34,12 @@ Main screen: using api `{API_URL}/advertisers` to get all advertisers with reque
     ProgramStatus: "Approved" | "Deactivated",
     name: string \* advertiser name *\
 }
+```
+
+Rerport screen:
+```
+- Exist only information regarding the total money amount paid through affiliate links, without click and purchase counts information
+- Unable to complete the second requirement because the API does not support it
 ```
 
 ## RESEARCH FLEXOFFERS APIs
@@ -134,7 +140,3 @@ Main screen: using api `{API_URL}/advertisers` to get all advertisers with reque
 ## Example screenshot
 
 ![alt screenshot](./screenshot.png)
-
-
-
-    

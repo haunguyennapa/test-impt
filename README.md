@@ -38,8 +38,12 @@ Main screen: using api `{API_URL}/advertisers` to get all advertisers with reque
 
 Rerport screen:
 ```
+Unable to complete the second requirement because the API does not support it
+Reason:
+- These isn't api support for reporting
 - Exist only information regarding the total money amount paid through affiliate links, without click and purchase counts information
-- Unable to complete the second requirement because the API does not support it
+- Responses for sales and payment-related APIs return 204 no content
+- You can check API statuses as below
 ```
 
 ## RESEARCH FLEXOFFERS APIs
